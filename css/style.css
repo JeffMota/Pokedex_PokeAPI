@@ -12,21 +12,52 @@
 }
 
 .pokedex {
+    display: flex;
     min-width: 500px;
     height: 500px;
     position: relative;
-
 }
 
 .img-pokedex {
     width: 100%;
 }
 
-.display-1 {
+.display-1, .display-2{
+    display: flex;
+    position: absolute;
     width: 30%;
     height: 25%;
-    position: absolute;
-    left: 13.2%;
-    bottom: 40%;
 }
 
+.display-1 {
+    left: 13.2%;
+    bottom: 40%;
+    justify-content: right;
+}
+
+.display-2 {
+    right: 12%;
+    bottom: 37.5%;
+}
+
+.pokemon{
+    width: 60%;
+}
+
+.img-pokemon {
+    width: 100%;
+    margin-top: 20%;
+}
+
+.title {
+    display: flex;
+}
+
+.back-pokemon {
+    width: 40%;
+}
+
+.img-back-pokemon {
+    margin-top: 30%;
+    width: 100%;
+}
