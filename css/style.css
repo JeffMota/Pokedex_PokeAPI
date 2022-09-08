@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     height: 100vh;
-    background-image: linear-gradient(to top, rgb(86, 230, 255), rgb(255, 250, 250))
+    background-image: linear-gradient(to top, rgb(86, 230, 255), rgb(198, 242, 255))
 }
 
 .pokedex {
@@ -58,27 +58,35 @@
 }
 
 .back-pokemon {
+
     width: 40%;
 }
 
 .img-back-pokemon {
-    margin-top: 50%;
+    margin-top: 20%;
     width: 100%;
 }
 
 .title {
+    font-size: clamp(0.5vw, 17px, 3vw);
     display: flex;
-    width: 100%;
-    height: 18%;
     justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 16%;
 }
 
-h2, p{
-    font-size: 80%;
+.pokemon-number {
+    color: rgb(105, 105, 105);
+}
+
+.pokemon-name {
+    text-transform: capitalize;
+    color: rgb(26, 26, 26);
 }
 
 .form {
+    position: absolute;
+    bottom: 25%;
     width: 85%;
 }
 

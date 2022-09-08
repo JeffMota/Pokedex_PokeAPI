@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
 
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 
@@ -17,21 +17,21 @@
             <img class='img-pokedex' src="./img/Pokedex.svg" alt="Pokédex">
             <div class="display-1">
                 <section class="back-pokemon">
-                    <img class="img-back-pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/26.gif" alt="back-pokemon">
+                    <img class="img-back-pokemon" src="#" alt="">
                 </section>
                 <section class="pokemon">
-                    <img class="img-pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/26.gif" alt="Pokémon">
+                    <img class="img-pokemon" src="#" alt="Loading...">
                 </section>
             </div>
             <div class="display-2">
-                <section class="title">
-                    <p>26</p> -
-                    <h2>Raichu</h2>
-                </section>
+                <h1 class="title">
+                    <span class="pokemon-number"></span> -
+                    <span class="pokemon-name">Raichu</span>
+                </h1>
             </div>
-            <div class="form">
+            <form class="form">
                 <input class="input-form" type="search" placeholder="Number or Name" >
-            </div>
+            </form>
         </div>
     </div>
 </body>
