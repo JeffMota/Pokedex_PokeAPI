@@ -43,10 +43,22 @@
 }
 
 .display-2 {
+    display: flex;
+    flex-direction: column;
     width: 32%;
     height: 22%;
     right: 10.8%;
     bottom: 47%;
+}
+
+.types {
+    display: flex;
+    font-size: clamp(0.5vw, 17px, 3vw);
+    justify-content: space-around;
+}
+
+.type-1 {
+    color: rgb(26, 26, 26);
 }
 
 .pokemon{
@@ -78,6 +90,7 @@
 
 .title {
     font-size: clamp(0.5vw, 17px, 3vw);
+    justify-content: center;
     display: flex;
     justify-content: center;
     width: 100%;
