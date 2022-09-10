@@ -39,9 +39,11 @@ const renderPokemon = async (pokemon) => {
     //Name and Number
     pokemonName.innerHTML = data.name;
     pokemonNumber.innerHTML = data.id;
+
     //Image Pokémon
     imgBackPokemon.src = data['sprites']['versions']['generation-v']['black-white']['animated']['back_default'];
     imgPokemon.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+
     //Types
     switch(type.length){
         case 1:
@@ -53,11 +55,12 @@ const renderPokemon = async (pokemon) => {
             <span class="type-1">${type['1']['type']['name']}</span>`;
             break;
     }
+
     //Attibs
     height.innerHTML = `Height: ${(data.height)/10}m`;
     weight.innerHTML = `Weight: ${(data.weight)/10}Kg`;
 
-    //Specie
+    //Specie info
     habitat.innerHTML = `Habitat: ${dataSpecie.habitat.name}`
 }
 
