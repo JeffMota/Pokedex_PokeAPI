@@ -3,6 +3,9 @@ const pokemonName = document.querySelector('.pokemon-name');
 const imgBackPokemon = document.querySelector('.img-back-pokemon');
 const imgPokemon = document.querySelector('.img-pokemon');
 const types = document.querySelector('.types');
+const height = document.querySelector('.height')
+const weight = document.querySelector('.weight')
+const habitat = document.querySelector('.habitat');
 
 const form = document.querySelector('.form');
 const input = document.querySelector('.input-form');
@@ -16,10 +19,22 @@ const fetchPokemon = async (pokemon) => {
     return data;
 }
 
+//Search Specie
+const fetchSpecie = async (pokemon) => {
+    const ResponseSpecie = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemon}`)
+
+    const data = await ResponseSpecie.json();
+
+    return data;
+}
+
 //Pokemon info render
 const renderPokemon = async (pokemon) => {
     const data = await fetchPokemon(pokemon);
+    const dataSpecie = await fetchSpecie(pokemon);
     const type = data.types;
+
+    input.value = '';
 
     //Name and Number
     pokemonName.innerHTML = data.name;
@@ -30,17 +45,20 @@ const renderPokemon = async (pokemon) => {
     //Types
     switch(type.length){
         case 1:
-            console.log('1');
-            types.innerHTML = `<span class="type-1">${type['0']['type']['name']}</span>`
+            types.innerHTML = `<span class="type-1">Type: ${type['0']['type']['name']}</span>`
             break;
         case 2:
-            console.log('2');
-            types.innerHTML = `<span class="type-1">${type['0']['type']['name']}</span>
-                                <span class="type-1">${type['1']['type']['name']}</span>`
+            types.innerHTML = 
+            `<span class="type-1">Types: ${type['0']['type']['name']}, </span>
+            <span class="type-1">${type['1']['type']['name']}</span>`;
             break;
     }
-    
-    input.value = '';
+    //Attibs
+    height.innerHTML = `Height: ${(data.height)/10}m`;
+    weight.innerHTML = `Weight: ${(data.weight)/10}Kg`;
+
+    //Specie
+    habitat.innerHTML = `Habitat: ${dataSpecie.habitat.name}`
 }
 
 //

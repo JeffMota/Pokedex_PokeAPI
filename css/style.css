@@ -53,12 +53,17 @@
 
 .types {
     display: flex;
-    font-size: clamp(0.5vw, 17px, 3vw);
+    font-size: clamp(0.5vw, 12px, 3vw);
     justify-content: space-around;
+    text-transform: capitalize;
 }
 
-.type-1 {
-    color: rgb(26, 26, 26);
+.attrib, .specie{
+    font-size: clamp(0.5vw, 12px, 3vw);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-transform: capitalize;
 }
 
 .pokemon{
